@@ -13,6 +13,7 @@ var questionAnswerThree = document.getElementById("q-answer-three");
 var questionAnswerFour = document.getElementById("q-answer-four");
 
 function questionTwo () {
+
     question.textContent = (questions[1].q)
     questionAnswerOne.textContent = (questions[1].a1)
     questionAnswerTwo.textContent = (questions[1].a2)
@@ -20,19 +21,19 @@ function questionTwo () {
     questionAnswerFour.textContent = (questions[1].a4)
 
     questionAnswerOne.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionThree()
     });
     questionAnswerTwo.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+            time=time-10
+            questionThree()
     });
     questionAnswerThree.addEventListener("click", function(){
        questionThree()
     });
     questionAnswerFour.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+            time=time-10
+            questionThree()
     });
 }
 
@@ -44,19 +45,19 @@ function questionThree () {
     questionAnswerFour.textContent = (questions[2].a4)
 
     questionAnswerOne.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionFour()
     });
     questionAnswerTwo.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionFour()
     });
     questionAnswerThree.addEventListener("click", function(){
        questionFour()
     });
     questionAnswerFour.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionFour()
     });
 }
 
@@ -68,16 +69,16 @@ function questionFour () {
     questionAnswerFour.textContent = (questions[3].a4)
 
     questionAnswerOne.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionFive();
     });
     questionAnswerTwo.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionFive();
     });
     questionAnswerThree.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionFive();
     });
     questionAnswerFour.addEventListener("click", function(){
         questionFive();
@@ -92,19 +93,19 @@ function questionFive () {
     questionAnswerFour.textContent = (questions[4].a4)
 
     questionAnswerOne.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        highScore ();
     });
     questionAnswerTwo.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        highScore ();
     });
     questionAnswerThree.addEventListener("click", function(){
         highScore ();
     });
     questionAnswerFour.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        highScore ();
     });
 }
 var questions = [
@@ -133,7 +134,7 @@ function startQuiz() {
       if (time===0 || time<0) {
         timer.textContent = ("Time:0")
         clearInterval(timeInterval);
-        endGame()
+        highScore();
 
       }
     
@@ -152,21 +153,28 @@ function startQuiz() {
     questionAnswerThree.textContent = (questions[0].a3)
     questionAnswerFour.textContent = (questions[0].a4)
     
-    
     questionAnswerOne.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionTwo()
     });
     questionAnswerTwo.addEventListener("click", function(){
-        if (time>10){
-        time=time-10}
+        time=time-10
+        questionTwo()
     });
     questionAnswerThree.addEventListener("click", function(){
-        if (time>10){
-            time=time-10}
+        time=time-10
+        questionTwo()
     });
     questionAnswerFour.addEventListener("click", function(){
         questionTwo()
     });
 }
 
+function highScore () {
+    question.style.display = "none";
+    answers.style.display = "none";
+    end.style.display = "block";
+    final.style.dispaly = "block";
+    final.textContent = ("Your final score is" + timer);
+    form.style.display = "block";
+}
