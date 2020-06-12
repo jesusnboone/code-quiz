@@ -1,0 +1,50 @@
+header {
+    display: inline;
+}
+#highscore {
+    float: left;
+    font-weight: bold;
+}
+
+#time {
+    float: right;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+ol {
+    text-align: center;
+    list-style-type: none;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+form {
+    text-align: center;
+}
+
+.center {
+    align-content: center;
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: purple;
+}
