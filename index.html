@@ -13,6 +13,13 @@
     </header>
 
     <h1 id="title">Coding Quiz Challenge</h1>
+
+    <p id="instruction">
+        Try to answer the following code-related questions within the time limit.<br><br>
+        Keep in mind that incorrect answers will penalize your score/time by 10 seconds!
+    </p>
+
+    <div class=center><button onclick="startQuiz()" id="start">Start Quiz</button></div>
     <h2 id="question">question</h2>
     <h3 id="answers">
         <ol>
@@ -23,16 +30,15 @@
         </ol>
     </h3>
 
-    <p id="instruction">Try to answer the following code-related questions within the time limit.<br><br>
-        Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</p>
-    <p id="end">All done!</p>
-    <p id="final"></p>
 
-    <form>
+    <p id="end">All done!</p>
+    <p id="final">Your final score is:</p>
+
+    <form id=form>
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br>
     </form>
-    <div class=center><button id="start">Start Quiz</button></div>
+    
     <script src="assets/javascript.js"></script>
 </body>
 </html>
