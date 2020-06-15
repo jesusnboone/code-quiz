@@ -196,7 +196,7 @@ submitScore.addEventListener("click", function (event) {
   
     var name = document.querySelector("#name").value;
   
-    if (name === null) {
+    if (name === "") {
       window.alert("Please enter your name!");
     } else {
   
