@@ -17,7 +17,7 @@ var msgDiv = document.querySelector("#msg");
 var score = 0;
 var time = 50;
 //initial display for the webpage
-timer.textContent = ("Time: " + time);
+timer.textContent = ("Score : " + time);
 question.style.display = "none";
 answers.style.display = "none";
 highScorePage.style.display = "none";
@@ -35,10 +35,10 @@ function startQuiz() {
     var time = 49;
     //setting our countdown
     var timeInterval = setInterval(function () {
-      timer.textContent = ("Time:" + time);
+      timer.textContent = ("Score : " + time);
       time--;
       if (time===0 || time<0) {
-        timer.textContent = ("Time: " + time)
+        timer.textContent = ("Score : " + time)
         clearInterval(timeInterval);
         highScore();
 
@@ -200,7 +200,7 @@ submitScore.addEventListener("click", function (event) {
       window.alert("Please enter your name!");
     } else {
   
-      localStorage.setItem("name", name + ":" + (time + 1));
+      localStorage.setItem("name", name + "  //  " + (timer.textContent));
       getHighScore();
     }}
 );}
